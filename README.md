@@ -1,5 +1,5 @@
 # react-donut-chart
-This project creates a reusable and customizable react donut chart component.
+This project creates a reusable and customizable react donut chart component. The chart features a built in tooltip component that is also customizable.
 
 This will be published as an NPM package soon after some additional tweaks and added features.
 
