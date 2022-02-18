@@ -24,6 +24,8 @@ export type DonutChartProps = {
   tooltipColor?: string;
   backgroundTooltipColor?: string;
   tooltipFontSize?: string;
+  tooltipSx?: any;
+  totalSx?: any;
 };
 
 export const DonutChart = ({
@@ -42,6 +44,8 @@ export const DonutChart = ({
   backgroundTooltipColor = "#D3D3D3",
   tooltipFontSize = "40px",
   tooltipColor = "black",
+  tooltipSx = {},
+  totalSx = {},
 }: DonutChartProps) => {
   let currPercentTotal = 0;
 
@@ -82,7 +86,7 @@ export const DonutChart = ({
   return (
     <TooltipContextProvider>
       <svg width={sz} height={sz}>
-        <svg viewBox="0 0 42 42">
+        <svg viewBox="0 0 38 38">
           <circle
             cx="50%"
             cy="50%"
@@ -123,6 +127,7 @@ export const DonutChart = ({
             y="50%"
             fill={totalTextColor}
             fontSize={totalFontSize}
+            style={{ ...totalSx }}
           >
             {currPercentTotal}%
           </text>
@@ -132,6 +137,7 @@ export const DonutChart = ({
         bgColor={backgroundTooltipColor}
         fontSize={tooltipFontSize}
         textColor={tooltipColor}
+        style={{ ...tooltipSx }}
       />
     </TooltipContextProvider>
   );
@@ -163,9 +169,9 @@ const DonutItem = ({
       strokeLinecap={roundedCaps ? "round" : "inherit"}
       fill="none"
       stroke={color}
-      stroke-width={trackWidth}
-      stroke-dasharray={dashArr(value)}
-      stroke-dashoffset={offSet}
+      strokeWidth={trackWidth}
+      strokeDasharray={dashArr(value)}
+      strokeDashoffset={offSet}
       onMouseOver={(ref) =>
         showTooltip(ref.clientX + 40, ref.clientY - 20, displayValue)
       }

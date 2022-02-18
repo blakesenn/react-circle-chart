@@ -5,10 +5,12 @@ function Tooltip({
   bgColor,
   textColor,
   fontSize,
+  style,
 }: {
   bgColor: string;
   textColor: string;
   fontSize: string;
+  style: {};
 }) {
   const { text, x, y, isTooltipVisible } = useTooltip();
   return (
@@ -25,9 +27,12 @@ function Tooltip({
             backgroundColor: bgColor,
             padding: "5px",
             borderRadius: "5px",
+            fontSize: fontSize,
+            color: textColor,
+            ...style,
           }}
         >
-          <div style={{ fontSize: fontSize, color: textColor }}>{text}</div>
+          <div>{text}</div>
         </div>
       )}
     </>

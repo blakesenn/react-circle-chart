@@ -6,8 +6,20 @@ const stories = storiesOf("Charts", module);
 
 stories.add("DonutChart", () => {
   return (
-    <div style={{ fontFamily: "monospace" }}>
-      <DonutChart />
+    <div>
+      <DonutChart
+        totalSx={{
+          fontFamily: "monospace",
+          fontSize: "100px",
+        }}
+        tooltipSx={{
+          fontFamily: "monospace",
+          fontSize: "50px",
+          backgroundColor: "#023047",
+          color: "white",
+        }}
+        size={500}
+      />
     </div>
   );
 });
