@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { TooltipContextProvider, useTooltip } from "../../../hooks/useTooltip";
 import Tooltip from "../../Tooltip/Tooltip";
+import * as CSS from "csstype";
 
 export interface Item {
   value: number;
@@ -20,12 +21,11 @@ export type DonutChartProps = {
   showTotal?: boolean;
   totalFontSize?: string;
   totalTextColor?: string;
-  showTooltipOnHover?: boolean;
   tooltipColor?: string;
   backgroundTooltipColor?: string;
   tooltipFontSize?: string;
-  tooltipSx?: any;
-  totalSx?: any;
+  tooltipSx?: CSS.Properties;
+  totalSx?: CSS.Properties;
 };
 
 export const DonutChart = ({
@@ -163,6 +163,7 @@ const DonutItem = ({
 
   return (
     <circle
+      style={{ transition: "stroke 1s ease-in-out" }}
       cx="50%"
       cy="50%"
       r="15.91549430918954"
