@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, ReactNode } from "react";
 
 type TooltipContextType = {
   showTool: boolean;
@@ -13,7 +13,7 @@ type TooltipContextType = {
 
 const TooltipContext = createContext<TooltipContextType>(null);
 
-export function TooltipContextProvider({ children }) {
+export function TooltipContextProvider({ children }: { children: ReactNode }) {
   const [showTool, setShowTool] = React.useState(false);
   const [text, setText] = React.useState("");
   const [x, setX] = React.useState(0);

@@ -3,16 +3,16 @@ import { TooltipContextProvider, useTooltip } from "../../../hooks/useTooltip";
 import Tooltip from "../../Tooltip/Tooltip";
 import * as CSS from "csstype";
 
-export interface Item {
+interface Item {
   value: number;
   label: string;
   color?: string;
-  displayValue?: number | string;
+  displayValue?: string;
 }
 
 const defaultColors = ["#4361ee", "#4cc9f0", "#4895ef", "#3f37c9"];
 
-export type DonutChartProps = {
+type DonutChartProps = {
   items?: Item[];
   roundedCaps?: boolean;
   size?: "sm" | "md" | "lg" | number;
@@ -143,6 +143,14 @@ export const DonutChart = ({
   );
 };
 
+type DonutItemProps = {
+  value: number;
+  displayValue: string;
+  roundedCaps: boolean;
+  color: string;
+  trackWidth: string;
+  offSet: number;
+};
 const DonutItem = ({
   value,
   displayValue,
@@ -150,7 +158,7 @@ const DonutItem = ({
   color,
   trackWidth,
   offSet,
-}) => {
+}: DonutItemProps) => {
   const dashArr = (value: number): string => {
     let adjustPercent = value;
     if (roundedCaps) {
