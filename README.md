@@ -25,4 +25,4 @@ import {DonutChart} from 'react-circle-chart'
 **Additional circle charts and customizable options shall be added in future versions of this package** 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome.
