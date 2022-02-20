@@ -1,13 +1,28 @@
-# react-donut-chart
-This project creates a reusable and customizable react donut chart component. The chart features a built in tooltip component that is also customizable.
+# react-circle-chart
 
-This will be published as an NPM package soon after some additional tweaks and added features.
-
-In the mean time to view this component in action, In the project directory, you can run:
-
-### `yarn storybook`
-
-Open http://localhost:3002 to view it in the browser.
-This will demonstrate a basic default donut chart. Storybook will be updated soon to reflect the different arguments you can utilize.
+Simple and customizable react circle (donut) chart component 
 
 
+
+## Installation
+
+
+```bash
+npm i react-circle-chart  OR  yarn add react-circle-chart
+```
+
+## Usage
+
+```typescript
+import {DonutChart} from 'react-circle-chart'
+ 
+// use the Donut Chart in your react application
+
+<DonutChart (...args) />
+
+```
+**Currently this package only exports one component -- Donut Chart**  
+**Additional circle charts and customizable options shall be added in future versions of this package** 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -9,8 +9,11 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declarationDir": "types",
+    "outDir": "types",
     "allowSyntheticDefaultImports": true,
     "strict": false,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -20,7 +23,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules", "src/stories"]
 }

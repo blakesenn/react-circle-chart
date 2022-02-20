@@ -1,1 +1,1 @@
-export * from "./components/Charts/Donut/DonutChart";
+export { DonutChart } from "./components/Charts/Donut";

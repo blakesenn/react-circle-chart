@@ -1,9 +1,10 @@
 {
   "name": "react-circle-chart",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple React donut chart component with flexible options.",
   "main": "dist/index.js",
-  "module":"dist/index.es.js",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -12,6 +13,7 @@
   },
   "author": "Blake Senn",
   "license": "MIT",
+  "files": ["dist"],
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-react": "^7.16.7",

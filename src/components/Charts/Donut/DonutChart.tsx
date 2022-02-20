@@ -1,4 +1,3 @@
-import React from "react";
 import { TooltipContextProvider, useTooltip } from "../../../hooks/useTooltip";
 import Tooltip from "../../Tooltip/Tooltip";
 import * as CSS from "csstype";
@@ -54,6 +53,7 @@ export const DonutChart = ({
    */
   let sz: string;
   let tw: string;
+  let vb: string;
 
   switch (size) {
     case "sm":
@@ -72,12 +72,15 @@ export const DonutChart = ({
   switch (trackWidth) {
     case "sm":
       tw = "3";
+      vb = "0 0 36 36";
       break;
     case "md":
       tw = "5";
+      vb = "0 0 38 38";
       break;
     case "lg":
       tw = "7";
+      vb = "0 0 40 40";
       break;
     default:
       tw = `${trackWidth}`;
@@ -86,7 +89,7 @@ export const DonutChart = ({
   return (
     <TooltipContextProvider>
       <svg width={sz} height={sz}>
-        <svg viewBox="0 0 38 38">
+        <svg viewBox={vb}>
           <circle
             cx="50%"
             cy="50%"

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { DonutChart } from "../components";
+import { DonutChart } from "../components/Charts/Donut";
 
 export default {
   /* 👇 The title prop is optional.
