@@ -13,7 +13,7 @@ npm i react-circle-chart  OR  yarn add react-circle-chart
 
 ## Example
 
-https://user-images.githubusercontent.com/74679468/154914060-15cca120-d28f-4d1f-a826-e52bae47515e.mov
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/74679468/154914903-a1303aef-0b15-4f15-b850-90ce43781c54.gif)
 
 ## Usage
 
