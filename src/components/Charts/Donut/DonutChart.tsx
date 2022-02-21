@@ -185,7 +185,7 @@ const DonutItem = ({
       strokeDasharray={dashArr(value)}
       strokeDashoffset={offSet}
       onMouseOver={(ref) =>
-        showTooltip(ref.clientX + 40, ref.clientY - 20, displayValue)
+        showTooltip(ref.pageX + 40, ref.pageY - 20, displayValue)
       }
       onMouseLeave={() => hideTooltip()}
       cursor="pointer"
