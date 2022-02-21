@@ -21,6 +21,11 @@ import {DonutChart} from 'react-circle-chart'
 <DonutChart (...args) />
 
 ```
+
+## Example
+To view the docs and a rendered working example of this Component -- click [here](https://blakesenn.github.io/react-circle-chart)
+
+
 **Currently this package only exports one component -- Donut Chart**  
 **Additional circle charts and customizable options shall be added in future versions of this package** 
 

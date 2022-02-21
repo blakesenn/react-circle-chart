@@ -22,3 +22,5 @@ yarn-error.log*
 
 /dist
 /rollup.config.js
+
+/storybook-static
