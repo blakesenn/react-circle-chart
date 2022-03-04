@@ -1,4 +1,3 @@
-import React from "react";
 import { useTooltip } from "../../hooks/useTooltip";
 
 function Tooltip({

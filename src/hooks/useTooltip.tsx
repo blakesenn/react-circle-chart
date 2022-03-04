@@ -1,4 +1,10 @@
-import React, { createContext, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useCallback,
+  useState,
+  ReactNode,
+} from "react";
 
 type TooltipContextType = {
   showTool: boolean;
@@ -14,10 +20,10 @@ type TooltipContextType = {
 const TooltipContext = createContext<TooltipContextType>(null);
 
 export function TooltipContextProvider({ children }: { children: ReactNode }) {
-  const [showTool, setShowTool] = React.useState(false);
-  const [text, setText] = React.useState("");
-  const [x, setX] = React.useState(0);
-  const [y, setY] = React.useState(0);
+  const [showTool, setShowTool] = useState(false);
+  const [text, setText] = useState("");
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
   return (
     <TooltipContext.Provider
       value={{ setShowTool, showTool, text, setText, x, setX, y, setY }}
@@ -29,9 +35,9 @@ export function TooltipContextProvider({ children }: { children: ReactNode }) {
 
 export function useTooltip() {
   const { setShowTool, showTool, text, x, setX, y, setY, setText } =
-    React.useContext(TooltipContext);
+    useContext(TooltipContext);
 
-  const showTooltip = React.useCallback(
+  const showTooltip = useCallback(
     (x: number, y: number, text: string) => {
       setX(x);
       setY(y);
